@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230304 13:41:41.755" rpa="false" schemaversion="3">
+<suite id="s1" name="Wikpedia 3" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\5\wikpedia_3.robot">
+<test id="s1-t1" name="Click Python Link" line="11">
+<kw name="Start Video Recording" library="ScreenCapLibrary" type="SETUP">
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<msg timestamp="20230304 13:41:47.512" level="INFO">Automatically setting a fps of 7.0</msg>
+<status status="PASS" starttime="20230304 13:41:45.338" endtime="20230304 13:41:47.513"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://en.wikipedia.org/wiki/Robot_Framework</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230304 13:41:47.521" level="INFO">Opening browser 'chrome' to base url 'https://en.wikipedia.org/wiki/Robot_Framework'.</msg>
+<status status="PASS" starttime="20230304 13:41:47.520" endtime="20230304 13:41:54.010"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Python')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230304 13:41:54.013" level="INFO">Clicking link 'xpath=//a[contains(text(), 'Python')]'.</msg>
+<status status="PASS" starttime="20230304 13:41:54.012" endtime="20230304 13:41:57.018"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Python (programming language) - Wikipedia</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230304 13:41:57.062" level="INFO">Page title is 'Python (programming language) - Wikipedia'.</msg>
+<status status="PASS" starttime="20230304 13:41:57.021" endtime="20230304 13:41:57.062"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230304 13:41:57.063" endtime="20230304 13:42:00.021"/>
+</kw>
+<kw name="Stop Video Recording" library="ScreenCapLibrary" type="TEARDOWN">
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<msg timestamp="20230304 13:42:00.057" level="INFO" html="true">&lt;a href="recording_1.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230304 13:42:00.022" endtime="20230304 13:42:00.058"/>
+</kw>
+<status status="PASS" starttime="20230304 13:41:45.336" endtime="20230304 13:42:00.058"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230304 13:42:00.061" endtime="20230304 13:42:00.061"/>
+</kw>
+<status status="PASS" starttime="20230304 13:41:41.758" endtime="20230304 13:42:00.061"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Wikpedia 3">Wikpedia 3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

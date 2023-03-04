@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230304 13:04:28.123" rpa="false" schemaversion="3">
+<suite id="s1" name="Hellogoogle" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\2\hellogoogle.robot">
+<test id="s1-t1" name="Search Robot Framework in Google" line="9">
+<kw name="Start Video Recording" library="ScreenCapLibrary" type="SETUP">
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<msg timestamp="20230304 13:04:30.792" level="INFO">Automatically setting a fps of 7.5</msg>
+<status status="PASS" starttime="20230304 13:04:28.639" endtime="20230304 13:04:30.796"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230304 13:04:30.800" level="INFO">Opening browser 'chrome' to base url 'http://google.com'.</msg>
+<status status="PASS" starttime="20230304 13:04:30.799" endtime="20230304 13:04:34.981"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="L2AGLb"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230304 13:04:34.982" endtime="20230304 13:04:35.055"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="L2AGLb"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230304 13:04:35.056" level="INFO">Clicking button 'xpath=//*[@id="L2AGLb"]'.</msg>
+<status status="PASS" starttime="20230304 13:04:35.056" endtime="20230304 13:04:35.223"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230304 13:04:35.228" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20230304 13:04:35.227" endtime="20230304 13:04:35.517"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230304 13:04:35.519" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg timestamp="20230304 13:04:35.934" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20230304 13:04:35.935" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230304 13:04:35.518" endtime="20230304 13:04:40.608"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Byebye</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230304 13:04:41.053" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230304 13:04:41.053" level="FAIL">Page should have contained text 'Byebye' but did not.</msg>
+<status status="FAIL" starttime="20230304 13:04:40.611" endtime="20230304 13:04:41.055"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" starttime="20230304 13:04:41.056" endtime="20230304 13:04:41.056"/>
+</kw>
+<kw name="Stop Video Recording" library="ScreenCapLibrary" type="TEARDOWN">
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<msg timestamp="20230304 13:04:41.124" level="INFO" html="true">&lt;a href="recording_3.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_3.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230304 13:04:41.061" endtime="20230304 13:04:41.124"/>
+</kw>
+<status status="FAIL" starttime="20230304 13:04:28.637" endtime="20230304 13:04:41.124">Page should have contained text 'Byebye' but did not.</status>
+</test>
+<status status="FAIL" starttime="20230304 13:04:28.126" endtime="20230304 13:04:41.125"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Hellogoogle">Hellogoogle</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230304 13:31:55.179" rpa="false" schemaversion="3">
+<suite id="s1" name="Wikipedia 2" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\4\wikipedia_2.robot">
+<test id="s1-t1" name="Search Robot Framework" line="11">
+<kw name="Start Video Recording" library="ScreenCapLibrary" type="SETUP">
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<msg timestamp="20230304 13:31:57.906" level="INFO">Automatically setting a fps of 8.0</msg>
+<status status="PASS" starttime="20230304 13:31:55.703" endtime="20230304 13:31:57.908"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://en.wikipedia.org/wiki/Main_Page</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230304 13:31:57.914" level="INFO">Opening browser 'chrome' to base url 'https://en.wikipedia.org/wiki/Main_Page'.</msg>
+<status status="PASS" starttime="20230304 13:31:57.913" endtime="20230304 13:32:02.291"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=search</arg>
+<arg>Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230304 13:32:02.293" level="INFO">Typing text 'Robot Framework' into text field 'name=search'.</msg>
+<status status="PASS" starttime="20230304 13:32:02.292" endtime="20230304 13:32:02.584"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name=search</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230304 13:32:02.594" level="INFO">Sending key(s) ('RETURN',) to name=search element.</msg>
+<msg timestamp="20230304 13:32:02.930" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20230304 13:32:02.930" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20230304 13:32:02.592" endtime="20230304 13:32:04.098"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//*[@id="firstHeading"]</arg>
+<arg>Robot Framework</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230304 13:32:04.179" level="INFO">Element 'xpath=//*[@id="firstHeading"]' contains text 'Robot Framework'.</msg>
+<status status="PASS" starttime="20230304 13:32:04.099" endtime="20230304 13:32:04.179"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230304 13:32:04.181" endtime="20230304 13:32:06.935"/>
+</kw>
+<kw name="Stop Video Recording" library="ScreenCapLibrary" type="TEARDOWN">
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<msg timestamp="20230304 13:32:06.974" level="INFO" html="true">&lt;a href="recording_1.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230304 13:32:06.936" endtime="20230304 13:32:06.974"/>
+</kw>
+<status status="PASS" starttime="20230304 13:31:55.702" endtime="20230304 13:32:06.975"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230304 13:32:06.976" endtime="20230304 13:32:06.976"/>
+</kw>
+<status status="PASS" starttime="20230304 13:31:55.183" endtime="20230304 13:32:06.976"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Wikipedia 2">Wikipedia 2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

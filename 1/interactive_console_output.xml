@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230304 11:01:50.151" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Admin\.vscode\extensions\robocorp.robotframework-lsp-1.9.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Run">
+<arg>echo "Hello World" &gt; hello_world.txt</arg>
+<msg timestamp="20230304 11:01:51.814" level="FAIL">No keyword with name 'Run' found.</msg>
+<status status="FAIL" starttime="20230304 11:01:51.814" endtime="20230304 11:01:51.814"/>
+</kw>
+<kw name="Get File">
+<var>${file}</var>
+<arg>hello_world.txt</arg>
+<status status="NOT RUN" starttime="20230304 11:01:51.816" endtime="20230304 11:01:51.816"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${file}</arg>
+<arg>Hello World</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20230304 11:01:51.816" endtime="20230304 11:01:51.816"/>
+</kw>
+<status status="PASS" starttime="20230304 11:01:50.196" endtime="20230304 11:01:59.206"/>
+</kw>
+<status status="PASS" starttime="20230304 11:01:50.196" endtime="20230304 11:01:59.206"/>
+</test>
+<status status="PASS" starttime="20230304 11:01:50.154" endtime="20230304 11:01:59.207"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

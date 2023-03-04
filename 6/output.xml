@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230304 14:20:42.701" rpa="false" schemaversion="3">
+<suite id="s1" name="Wikipedia 4" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\6\wikipedia_4.robot">
+<test id="s1-t1" name="Verify Section" line="11">
+<kw name="Start Video Recording" library="ScreenCapLibrary" type="SETUP">
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<msg timestamp="20230304 14:20:45.523" level="INFO">Automatically setting a fps of 8.5</msg>
+<status status="PASS" starttime="20230304 14:20:43.266" endtime="20230304 14:20:45.525"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://en.wikipedia.org/wiki/Robot_Framework</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230304 14:20:45.530" level="INFO">Opening browser 'chrome' to base url 'https://en.wikipedia.org/wiki/Robot_Framework'.</msg>
+<status status="PASS" starttime="20230304 14:20:45.529" endtime="20230304 14:20:49.042"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="Description"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230304 14:20:49.278" level="INFO">Element 'xpath=//*[@id="Description"]' is displayed.</msg>
+<status status="PASS" starttime="20230304 14:20:49.044" endtime="20230304 14:20:49.278"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230304 14:20:49.279" endtime="20230304 14:20:52.125"/>
+</kw>
+<kw name="Stop Video Recording" library="ScreenCapLibrary" type="TEARDOWN">
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<msg timestamp="20230304 14:20:52.143" level="INFO" html="true">&lt;a href="recording_1.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230304 14:20:52.126" endtime="20230304 14:20:52.143"/>
+</kw>
+<status status="PASS" starttime="20230304 14:20:43.266" endtime="20230304 14:20:52.145"/>
+</test>
+<test id="s1-t2" name="Verify Table" line="16">
+<kw name="Start Video Recording" library="ScreenCapLibrary" type="SETUP">
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<msg timestamp="20230304 14:20:54.345" level="INFO">Automatically setting a fps of 8.5</msg>
+<status status="PASS" starttime="20230304 14:20:52.147" endtime="20230304 14:20:54.347"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://en.wikipedia.org/wiki/Robot_Framework</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230304 14:20:54.352" level="INFO">Opening browser 'chrome' to base url 'https://en.wikipedia.org/wiki/Robot_Framework'.</msg>
+<status status="PASS" starttime="20230304 14:20:54.352" endtime="20230304 14:20:58.095"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="mw-content-text"]/div[1]/table[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230304 14:20:58.241" level="INFO">Element 'xpath=//*[@id="mw-content-text"]/div[1]/table[2]' is displayed.</msg>
+<status status="PASS" starttime="20230304 14:20:58.096" endtime="20230304 14:20:58.241"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230304 14:20:58.247" endtime="20230304 14:21:00.963"/>
+</kw>
+<kw name="Stop Video Recording" library="ScreenCapLibrary" type="TEARDOWN">
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<msg timestamp="20230304 14:21:00.981" level="INFO" html="true">&lt;a href="recording_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230304 14:21:00.964" endtime="20230304 14:21:00.981"/>
+</kw>
+<status status="PASS" starttime="20230304 14:20:52.146" endtime="20230304 14:21:00.981"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230304 14:21:00.984" endtime="20230304 14:21:00.985"/>
+</kw>
+<status status="PASS" starttime="20230304 14:20:42.703" endtime="20230304 14:21:00.986"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Wikipedia 4">Wikipedia 4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230304 11:10:18.894" rpa="false" schemaversion="3">
+<suite id="s1" name="Helloworld" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\helloworld.robot">
+<test id="s1-t1" name="Hello World" line="5">
+<kw name="Run" library="OperatingSystem">
+<arg>echo "Hello World" &gt; hello_world.txt</arg>
+<doc>Runs the given command in the system and returns the output.</doc>
+<msg timestamp="20230304 11:10:18.950" level="INFO">Running command 'echo "Hello World" &gt; hello_world.txt'.</msg>
+<status status="PASS" starttime="20230304 11:10:18.936" endtime="20230304 11:10:18.970"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${file}</var>
+<arg>hello_world.txt</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230304 11:10:18.971" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Admin\IT\WSB\Tester\GR3\T7\hello_world.txt"&gt;C:\Users\Admin\IT\WSB\Tester\GR3\T7\hello_world.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20230304 11:10:18.972" level="INFO">${file} = "Hello World" 
+</msg>
+<status status="PASS" starttime="20230304 11:10:18.971" endtime="20230304 11:10:18.972"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${file}</arg>
+<arg>Byebye</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<msg timestamp="20230304 11:10:18.972" level="FAIL">'"Hello World" 
+' does not contain 'Byebye'</msg>
+<status status="FAIL" starttime="20230304 11:10:18.972" endtime="20230304 11:10:18.972"/>
+</kw>
+<status status="FAIL" starttime="20230304 11:10:18.936" endtime="20230304 11:10:18.974">'"Hello World" 
+' does not contain 'Byebye'</status>
+</test>
+<status status="FAIL" starttime="20230304 11:10:18.900" endtime="20230304 11:10:18.975"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Helloworld">Helloworld</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
