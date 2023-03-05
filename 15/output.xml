@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230305 13:38:57.786" rpa="false" schemaversion="3">
+<suite id="s1" name="Wikipedia 9" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\15\wikipedia_9.robot">
+<test id="s1-t1" name="Verify Button" line="29">
+<kw name="Start Video Recording" library="ScreenCapLibrary" type="SETUP">
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<msg timestamp="20230305 13:39:00.522" level="INFO">Automatically setting a fps of 6.0</msg>
+<status status="PASS" starttime="20230305 13:38:58.293" endtime="20230305 13:39:00.525"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.onet.pl/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230305 13:39:00.531" level="INFO">Opening browser 'chrome' to base url 'https://www.onet.pl/'.</msg>
+<status status="PASS" starttime="20230305 13:39:00.530" endtime="20230305 13:39:06.547"/>
+</kw>
+<kw name="Verify Button and Refresh Page">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${button_content}</var>
+<arg>${button}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230305 13:39:06.626" level="INFO">${button_content} = SZUKAJ</msg>
+<status status="PASS" starttime="20230305 13:39:06.549" endtime="20230305 13:39:06.626"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${button_content}' != 'SZUKAJ'</arg>
+<arg>Go To</arg>
+<arg>https://www.onet.pl/</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20230305 13:39:06.626" endtime="20230305 13:39:06.627"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${button_content}</var>
+<arg>${button}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230305 13:39:06.660" level="INFO">${button_content} = SZUKAJ</msg>
+<status status="PASS" starttime="20230305 13:39:06.628" endtime="20230305 13:39:06.660"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${button_content}' == 'SZUKAJ'</arg>
+<arg>Take Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Take Screenshot" library="ScreenCapLibrary">
+<doc>Takes a screenshot in the specified format at library import and
+embeds it into the log file (PNG by default).</doc>
+<msg timestamp="20230305 13:39:07.870" level="INFO" html="true">&lt;a href="screenshot_1.png"&gt;&lt;img src="screenshot_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 13:39:06.661" endtime="20230305 13:39:07.871"/>
+</kw>
+<status status="PASS" starttime="20230305 13:39:06.660" endtime="20230305 13:39:07.871"/>
+</kw>
+<kw name="Should Not Be Equal As Strings" library="BuiltIn">
+<arg>${button_content}</arg>
+<arg>None</arg>
+<doc>Fails if objects are equal after converting them to strings.</doc>
+<status status="PASS" starttime="20230305 13:39:07.871" endtime="20230305 13:39:07.872"/>
+</kw>
+<status status="PASS" starttime="20230305 13:39:06.548" endtime="20230305 13:39:07.872"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230305 13:39:07.873" endtime="20230305 13:39:10.924"/>
+</kw>
+<kw name="Stop Video Recording" library="ScreenCapLibrary" type="TEARDOWN">
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<msg timestamp="20230305 13:39:10.946" level="INFO" html="true">&lt;a href="recording_8.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_8.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 13:39:10.925" endtime="20230305 13:39:10.946"/>
+</kw>
+<status status="PASS" starttime="20230305 13:38:58.293" endtime="20230305 13:39:10.947"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230305 13:39:10.948" endtime="20230305 13:39:10.948"/>
+</kw>
+<status status="PASS" starttime="20230305 13:38:57.788" endtime="20230305 13:39:10.948"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Wikipedia 9">Wikipedia 9</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

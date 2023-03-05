@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230305 14:51:05.303" rpa="false" schemaversion="3">
+<suite id="s1" name="Reqres 1" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\16\reqres_1.robot">
+<test id="s1-t1" name="Get Users" line="6">
+<kw name="GET" library="RequestsLibrary">
+<arg>https://reqres.in/api/users</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20230305 14:51:05.579" level="INFO">GET Request : url=https://reqres.in/api/users 
+ path_url=/api/users 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230305 14:51:05.579" level="INFO">GET Response : url=https://reqres.in/api/users 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 05 Mar 2023 13:51:04 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"3e4-2RLXvr5wTg9YQ6aH95CkYoFNuO8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '7166', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=4dypYLW4VmboV9tTaFWMeV%2FXFhxCC7EgM1OY9kgoeBlSZ91mt9JfNuy%2FWfIr9BIPIoD2HS1vocQ1FRMleSN5s3JGY5wRWYT1uVB6LE24wVllc%2ByyoFayrkm5QEyZdWki%2BEXHEx3Ccg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7a32d4e62d4ebfcb-WAW', 'Content-Encoding': 'gzip'} 
+ body={"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<status status="PASS" starttime="20230305 14:51:05.447" endtime="20230305 14:51:05.579"/>
+</kw>
+<status status="PASS" starttime="20230305 14:51:05.446" endtime="20230305 14:51:05.580"/>
+</test>
+<test id="s1-t2" name="Get Users Status" line="9">
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://reqres.in/api/users</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20230305 14:51:05.661" level="INFO">GET Request : url=https://reqres.in/api/users 
+ path_url=/api/users 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230305 14:51:05.661" level="INFO">GET Response : url=https://reqres.in/api/users 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 05 Mar 2023 13:51:04 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"3e4-2RLXvr5wTg9YQ6aH95CkYoFNuO8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '7166', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=1bB%2Fm59jxro0ppok3nIUTk581B%2BDL5ZdevhSdyOgWzWrs9ar5AhBvfWg1VvLKMtvDxWOqJaCXAwcxVqnovBqgksLbCy9yS3wTDhcMXwuWZCx8B3y7HktZggTu%2FLGcD5h6FvgkDuvXg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7a32d4e6bc62bfa6-WAW', 'Content-Encoding': 'gzip'} 
+ body={"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg timestamp="20230305 14:51:05.662" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230305 14:51:05.583" endtime="20230305 14:51:05.662"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20230305 14:51:05.663" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230305 14:51:05.662" endtime="20230305 14:51:05.663"/>
+</kw>
+<status status="PASS" starttime="20230305 14:51:05.581" endtime="20230305 14:51:05.663"/>
+</test>
+<test id="s1-t3" name="Get Respose Time" line="13">
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://reqres.in/api/users</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20230305 14:51:05.764" level="INFO">GET Request : url=https://reqres.in/api/users 
+ path_url=/api/users 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230305 14:51:05.764" level="INFO">GET Response : url=https://reqres.in/api/users 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 05 Mar 2023 13:51:04 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"3e4-2RLXvr5wTg9YQ6aH95CkYoFNuO8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '7166', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=A37kSm5xO2mV2KqouFhh1takmtosAv13tkfc2dqQzhPBcTK066FawQETEy021CTBVXNe9x2sdnR9qGsj9cMP0plkCBjkDTLJ5ZtW%2BIx1fGZoAipkjSPSTEUG60XNO9sFUd2Q4n61dQ%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7a32d4e75b2935b4-WAW', 'Content-Encoding': 'gzip'} 
+ body={"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},{"id":3,"email":"emma.wong@reqres.in","first_name":"Emma","last_name":"Wong","avatar":"https://reqres.in/img/faces/3-image.jpg"},{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"},{"id":5,"email":"charles.morris@reqres.in","first_name":"Charles","last_name":"Morris","avatar":"https://reqres.in/img/faces/5-image.jpg"},{"id":6,"email":"tracey.ramos@reqres.in","first_name":"Tracey","last_name":"Ramos","avatar":"https://reqres.in/img/faces/6-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg timestamp="20230305 14:51:05.764" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230305 14:51:05.666" endtime="20230305 14:51:05.764"/>
+</kw>
+<kw name="IF ${response.elapsed.total_seconds()} &lt; 2">
+<msg timestamp="20230305 14:51:05.767" level="FAIL">No keyword with name 'IF ${response.elapsed.total_seconds()} &lt; 2' found.</msg>
+<status status="FAIL" starttime="20230305 14:51:05.767" endtime="20230305 14:51:05.767"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Response Time was: ${response.elapsed.total_seconds()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230305 14:51:05.768" endtime="20230305 14:51:05.768"/>
+</kw>
+<kw name="ELSEIF ${response.elapsed.total_seconds()} &gt;= 2">
+<status status="NOT RUN" starttime="20230305 14:51:05.770" endtime="20230305 14:51:05.770"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Response Time was: ${response.elapsed.total_seconds()}</arg>
+<arg>WARN</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230305 14:51:05.772" endtime="20230305 14:51:05.772"/>
+</kw>
+<status status="FAIL" starttime="20230305 14:51:05.665" endtime="20230305 14:51:05.773">No keyword with name 'IF ${response.elapsed.total_seconds()} &lt; 2' found.</status>
+</test>
+<test id="s1-t4" name="Create Users" line="20">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${data}</var>
+<arg>username=Joe</arg>
+<arg>password=Tester123.</arg>
+<arg>email=Joe.Biden@reqres.in</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230305 14:51:05.778" level="INFO">${data} = {'username': 'Joe', 'password': 'Tester123.', 'email': 'Joe.Biden@reqres.in'}</msg>
+<status status="PASS" starttime="20230305 14:51:05.776" endtime="20230305 14:51:05.778"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://reqres.in/api/register</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20230305 14:51:06.009" level="INFO">POST Request : url=https://reqres.in/api/register 
+ path_url=/api/register 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '77', 'Content-Type': 'application/json'} 
+ body=b'{"username": "Joe", "password": "Tester123.", "email": "Joe.Biden@reqres.in"}' 
+ </msg>
+<msg timestamp="20230305 14:51:06.009" level="INFO">POST Response : url=https://reqres.in/api/register 
+ status=400, reason=Bad Request 
+ headers={'Date': 'Sun, 05 Mar 2023 13:51:05 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '57', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"39-6jrJxn+7f+pQUhbPgNMst7tagpA"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=GkfLMJxSztxlETLUc1bJgmbcw6FSwhn1U9pz5VPt7%2FEB2n0CoyfnFmbOpGj15i27Rtu%2BapNUBWw7dDiNUw8bAZCv1xckB%2BCEshUIhoiRhHuxGsYN30AiuX547qNyguJteSPfkj8rvg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7a32d4e84ca3c01e-WAW'} 
+ body={"error":"Note: Only defined users succeed registration"} 
+ </msg>
+<msg timestamp="20230305 14:51:06.009" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: https://reqres.in/api/register</msg>
+<status status="FAIL" starttime="20230305 14:51:05.778" endtime="20230305 14:51:06.012"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.json()['name']}</arg>
+<arg>Joe</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20230305 14:51:06.012" endtime="20230305 14:51:06.012"/>
+</kw>
+<status status="FAIL" starttime="20230305 14:51:05.776" endtime="20230305 14:51:06.013">HTTPError: 400 Client Error: Bad Request for url: https://reqres.in/api/register</status>
+</test>
+<test id="s1-t5" name="Get User With ID 1" line="25">
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>https://reqres.in/api/users/1</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20230305 14:51:06.117" level="INFO">GET Request : url=https://reqres.in/api/users/1 
+ path_url=/api/users/1 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230305 14:51:06.117" level="INFO">GET Response : url=https://reqres.in/api/users/1 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 05 Mar 2023 13:51:05 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"118-P3iKcVpIgCj9HqYeOOrGLX8qJVc"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '3298', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=9WWpeuPQWtZFcvGiiqeOswEoX2V%2BtQ7bWgU2zuKZyCalU1ZLyQIF2v5LbJCoeS%2FCWo4ciIgkpfVGgZOsSSQq74Kgeb8BWtAhAd4sec3ngEQ7pjIveJXJNckx6oX8qxK5CBv6SCGX0Q%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7a32d4e9899935d5-WAW', 'Content-Encoding': 'gzip'} 
+ body={"data":{"id":1,"email":"george.bluth@reqres.in","first_name":"George","last_name":"Bluth","avatar":"https://reqres.in/img/faces/1-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg timestamp="20230305 14:51:06.117" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230305 14:51:06.015" endtime="20230305 14:51:06.117"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.data.name}</arg>
+<arg>george.bluth@reqres.in</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230305 14:51:06.118" level="FAIL">Resolving variable '${response.data.name}' failed: AttributeError: 'Response' object has no attribute 'data'</msg>
+<status status="FAIL" starttime="20230305 14:51:06.118" endtime="20230305 14:51:06.119"/>
+</kw>
+<status status="FAIL" starttime="20230305 14:51:06.014" endtime="20230305 14:51:06.119">Resolving variable '${response.data.name}' failed: AttributeError: 'Response' object has no attribute 'data'</status>
+</test>
+<status status="FAIL" starttime="20230305 14:51:05.306" endtime="20230305 14:51:06.122"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="3" skip="0" id="s1" name="Reqres 1">Reqres 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
