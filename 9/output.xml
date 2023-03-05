@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230305 09:37:36.986" rpa="false" schemaversion="3">
+<suite id="s1" name="Keywords" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\9\keywords.robot">
+<test id="s1-t1" name="Use Keyword" line="6">
+<kw name="Echo Hello">
+<kw name="Log" library="BuiltIn">
+<arg>Hello World!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230305 09:37:37.012" level="INFO">Hello World!</msg>
+<status status="PASS" starttime="20230305 09:37:37.010" endtime="20230305 09:37:37.012"/>
+</kw>
+<status status="PASS" starttime="20230305 09:37:37.010" endtime="20230305 09:37:37.012"/>
+</kw>
+<status status="PASS" starttime="20230305 09:37:37.010" endtime="20230305 09:37:37.012"/>
+</test>
+<status status="PASS" starttime="20230305 09:37:36.989" endtime="20230305 09:37:37.013"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Keywords">Keywords</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

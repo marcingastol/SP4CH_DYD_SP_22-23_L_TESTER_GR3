@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230305 09:29:00.911" rpa="false" schemaversion="3">
+<suite id="s1" name="Hellogoogle" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\8\hellogoogle.robot">
+<test id="s1-t1" name="Search Robot Framework in Google" line="15">
+<kw name="Start Video Recording" library="ScreenCapLibrary" type="SETUP">
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<msg timestamp="20230305 09:29:03.646" level="INFO">Automatically setting a fps of 6.5</msg>
+<status status="PASS" starttime="20230305 09:29:01.443" endtime="20230305 09:29:03.649"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://google.com</arg>
+<arg>${PRZEGLADARKA}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230305 09:29:03.653" level="INFO">Opening browser 'firefox' to base url 'http://google.com'.</msg>
+<msg timestamp="20230305 09:29:03.655" level="INFO">Firefox driver log is always forced to to: C:\Users\Admin\IT\WSB\Tester\GR3\T7\8\geckodriver-2.log</msg>
+<msg timestamp="20230305 09:29:06.194" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230305 09:29:06.194" level="FAIL">WebDriverException: Message: Service geckodriver unexpectedly exited. Status code was: 64
+</msg>
+<status status="FAIL" starttime="20230305 09:29:03.653" endtime="20230305 09:29:06.197"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${HEADLESS}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>xpath=//*[@id="L2AGLb"]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20230305 09:29:06.198" endtime="20230305 09:29:06.198"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${HEADLESS}</arg>
+<arg>Click Button</arg>
+<arg>xpath=//*[@id="L2AGLb"]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20230305 09:29:06.199" endtime="20230305 09:29:06.199"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230305 09:29:06.199" endtime="20230305 09:29:06.199"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20230305 09:29:06.200" endtime="20230305 09:29:06.200"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Wikipedia</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230305 09:29:06.200" endtime="20230305 09:29:06.200"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" starttime="20230305 09:29:06.200" endtime="20230305 09:29:06.200"/>
+</kw>
+<kw name="Stop Video Recording" library="ScreenCapLibrary" type="TEARDOWN">
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<msg timestamp="20230305 09:29:06.278" level="INFO" html="true">&lt;a href="recording_6.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_6.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 09:29:06.202" endtime="20230305 09:29:06.278"/>
+</kw>
+<status status="FAIL" starttime="20230305 09:29:01.443" endtime="20230305 09:29:06.279">WebDriverException: Message: Service geckodriver unexpectedly exited. Status code was: 64
+</status>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230305 09:29:06.281" endtime="20230305 09:29:06.281"/>
+</kw>
+<status status="FAIL" starttime="20230305 09:29:00.913" endtime="20230305 09:29:06.281"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Hellogoogle">Hellogoogle</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

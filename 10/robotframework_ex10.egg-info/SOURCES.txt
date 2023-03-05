@@ -1,0 +1,6 @@
+setup.py
+ex10/__init__.py
+robotframework_ex10.egg-info/PKG-INFO
+robotframework_ex10.egg-info/SOURCES.txt
+robotframework_ex10.egg-info/dependency_links.txt
+robotframework_ex10.egg-info/top_level.txt
