@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.10 on win32)" generated="20230305 12:54:35.316" rpa="false" schemaversion="3">
+<suite id="s1" name="Wikipedia 7" source="C:\Users\Admin\IT\WSB\Tester\GR3\T7\13\wikipedia_7.robot">
+<test id="s1-t1" name="Verify Language" line="15">
+<kw name="Start Video Recording" library="ScreenCapLibrary" type="SETUP">
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<msg timestamp="20230305 12:54:38.011" level="INFO">Automatically setting a fps of 7.5</msg>
+<status status="PASS" starttime="20230305 12:54:35.823" endtime="20230305 12:54:38.014"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://en.wikipedia.org/wiki/Robot_Framework</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230305 12:54:38.018" level="INFO">Opening browser 'chrome' to base url 'https://en.wikipedia.org/wiki/Robot_Framework'.</msg>
+<status status="PASS" starttime="20230305 12:54:38.017" endtime="20230305 12:54:41.705"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${language_status}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=//*[@id="p-lang-btn-checkbox"]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="p-lang-btn-checkbox"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230305 12:54:41.785" level="INFO">Current page contains element 'xpath=//*[@id="p-lang-btn-checkbox"]'.</msg>
+<status status="PASS" starttime="20230305 12:54:41.706" endtime="20230305 12:54:41.786"/>
+</kw>
+<msg timestamp="20230305 12:54:41.786" level="INFO">${language_status} = True</msg>
+<status status="PASS" starttime="20230305 12:54:41.706" endtime="20230305 12:54:41.786"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${language_status}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="p-lang-btn-checkbox"]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="p-lang-btn-checkbox"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 12:54:41.797" level="INFO">Clicking element 'xpath=//*[@id="p-lang-btn-checkbox"]'.</msg>
+<status status="PASS" starttime="20230305 12:54:41.794" endtime="20230305 12:54:42.043"/>
+</kw>
+<status status="PASS" starttime="20230305 12:54:41.793" endtime="20230305 12:54:42.043"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${language_status}</arg>
+<arg>Sleep</arg>
+<arg>3s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 12:54:45.045" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230305 12:54:42.044" endtime="20230305 12:54:45.045"/>
+</kw>
+<status status="PASS" starttime="20230305 12:54:42.043" endtime="20230305 12:54:45.045"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${deutsch}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html/body/div[1]/div[2]/div[8]/div/ul/li[3]/a</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[2]/div[8]/div/ul/li[3]/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230305 12:54:45.087" level="INFO">Element 'xpath=/html/body/div[1]/div[2]/div[8]/div/ul/li[3]/a' is displayed.</msg>
+<status status="PASS" starttime="20230305 12:54:45.046" endtime="20230305 12:54:45.087"/>
+</kw>
+<msg timestamp="20230305 12:54:45.088" level="INFO">${deutsch} = True</msg>
+<status status="PASS" starttime="20230305 12:54:45.046" endtime="20230305 12:54:45.088"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${deutsch}</arg>
+<arg>Click Element</arg>
+<arg>xpath=/html/body/div[1]/div[2]/div[8]/div/ul/li[3]/a</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[2]/div[8]/div/ul/li[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230305 12:54:45.092" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[2]/div[8]/div/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20230305 12:54:45.091" endtime="20230305 12:54:46.231"/>
+</kw>
+<status status="PASS" starttime="20230305 12:54:45.090" endtime="20230305 12:54:46.231"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${deutsch}</arg>
+<arg>Sleep</arg>
+<arg>3s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230305 12:54:49.234" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230305 12:54:46.233" endtime="20230305 12:54:49.234"/>
+</kw>
+<status status="PASS" starttime="20230305 12:54:46.232" endtime="20230305 12:54:49.234"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${current_page}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230305 12:54:49.241" level="INFO">${current_page} = https://de.wikipedia.org/wiki/Robot_Framework</msg>
+<status status="PASS" starttime="20230305 12:54:49.234" endtime="20230305 12:54:49.241"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${current_page}</arg>
+<arg>de</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230305 12:54:49.242" endtime="20230305 12:54:49.242"/>
+</kw>
+<kw name="Stop Video Recording" library="ScreenCapLibrary" type="TEARDOWN">
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<msg timestamp="20230305 12:54:49.310" level="INFO" html="true">&lt;a href="recording_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230305 12:54:49.242" endtime="20230305 12:54:49.310"/>
+</kw>
+<status status="PASS" starttime="20230305 12:54:35.822" endtime="20230305 12:54:49.310"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230305 12:54:49.312" endtime="20230305 12:54:56.742"/>
+</kw>
+<status status="PASS" starttime="20230305 12:54:35.318" endtime="20230305 12:54:56.742"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Wikipedia 7">Wikipedia 7</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
