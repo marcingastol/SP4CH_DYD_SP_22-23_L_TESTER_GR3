@@ -1,0 +1,79 @@
+name: Exchange Rate CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r 'T9/Exchange rate/requirements.txt'
+
+    - name: Run tests
+      run: |
+        cd 'T9/Exchange rate'
+        export PYTHONPATH="${PYTHONPATH}:$(pwd)"
+        pytest tests/ -v
+
+    - name: Install SonarQube scanner
+      run: |
+        wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
+        unzip sonar-scanner-cli-4.6.2.2472-linux.zip
+        sudo ln -s $GITHUB_WORKSPACE/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner /usr/local/bin/sonar-scanner
+
+    - name: Run SonarQube analysis
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: |
+        sonar-scanner \
+          -Dsonar.projectKey='marcingastol_SP4CH_DYD_SP_22-23_L_TESTER_GR1' \
+          -Dsonar.organization='marcingastol-t9' \
+          -Dsonar.sources='T9/Exchange rate/app/' \
+          -Dsonar.tests='T9/Exchange rate/tests/' \
+          -Dsonar.python.coverage.reportPaths=coverage.xml \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=$SONAR_TOKEN
+
+    - name: Install linting and formatting dependencies
+      run: |
+        pip install flake8 black
+
+    - name: Run linting
+      run: |
+        flake8 'T9/Exchange rate/app/' 'T9/Exchange rate/tests/'
+
+    - name: Run code formatting
+      run: |
+        black --check 'T9/Exchange rate/app/' 'T9/Exchange rate/tests/'
+
+    - name: Install static type checking dependencies
+      run: |
+        pip install mypy
+
+    - name: Run static type checking
+      run: |
+        mypy 'T9/Exchange rate/app/' 'T9/Exchange rate/tests/'
+    
+    - name: Install security checking dependencies
+      run: |
+        pip install bandit
+
+    - name: Run security checks
+      run: |
+        bandit -r 'T9/Exchange rate/app/'
