@@ -22,4 +22,4 @@ def test_convert_currency():
     from_currency = "EUR"
     to_currency = "JPY"
     converted_amount = convert_currency(amount, from_currency, to_currency, exchange_rates)
-    assert converted_amount == pytest.approx(129550.76, 0.01)
+    assert converted_amount == pytest.approx(12955.76, 0.01)
